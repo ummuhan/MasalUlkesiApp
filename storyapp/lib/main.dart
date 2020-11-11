@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:storyapp/screens/home_page.dart';
 import 'package:storyapp/screens/splash_screen.dart';
 
 void main() {

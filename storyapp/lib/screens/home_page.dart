@@ -1,6 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:gradient_text/gradient_text.dart';
+import 'package:storyapp/screens/story_options_page.dart';
 import 'package:storyapp/screens/story_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -78,9 +79,12 @@ class _HomePageState extends State<HomePage> {
           child: Row(
             children: [
               MasalCesitEkle(
-                secenekIsim: "Kısa Masallar",
-                arkaPlanResmi: "assets/images/village.jpg",
-              ),
+                  secenekIsim: "Kısa Masallar",
+                  arkaPlanResmi: "assets/images/village.jpg",
+                  callback: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => StoryOptionPage()));
+                  }),
               MasalCesitEkle(
                 secenekIsim: "İngilizce Masallar",
                 arkaPlanResmi: "assets/images/image.jpg",
@@ -161,32 +165,37 @@ class _HomePageState extends State<HomePage> {
 class MasalCesitEkle extends StatelessWidget {
   final String secenekIsim;
   final String arkaPlanResmi;
+  final VoidCallback callback;
 
   const MasalCesitEkle({
     Key key,
     this.secenekIsim,
     this.arkaPlanResmi,
+    this.callback,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(10),
-      margin: EdgeInsets.only(right: 5, left: 20, bottom: 10, top: 10),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
-        image: DecorationImage(
-            image: AssetImage(
-              arkaPlanResmi,
-            ),
-            fit: BoxFit.cover),
+    return InkWell(
+      onTap: callback,
+      child: Container(
+        padding: EdgeInsets.all(10),
+        margin: EdgeInsets.only(right: 5, left: 20, bottom: 10, top: 10),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          image: DecorationImage(
+              image: AssetImage(
+                arkaPlanResmi,
+              ),
+              fit: BoxFit.cover),
+        ),
+        child: Text(
+          secenekIsim,
+          style: TextStyle(fontSize: 20),
+        ),
+        width: MediaQuery.of(context).size.width / 1.3,
+        height: MediaQuery.of(context).size.height / 3,
       ),
-      child: Text(
-        secenekIsim,
-        style: TextStyle(fontSize: 20),
-      ),
-      width: MediaQuery.of(context).size.width / 1.3,
-      height: MediaQuery.of(context).size.height / 3,
     );
   }
 }
