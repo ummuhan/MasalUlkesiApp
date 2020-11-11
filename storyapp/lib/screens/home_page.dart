@@ -1,6 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:gradient_text/gradient_text.dart';
+import 'package:storyapp/screens/story_page.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key}) : super(key: key);
@@ -110,11 +111,11 @@ class _HomePageState extends State<HomePage> {
         ),
         InkWell(
           onTap: () {
-            // Navigator.of(context).push(
-            //   MaterialPageRoute(
-            //     builder: (context) => StoryPage(),
-            //   ),
-            // );
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => StoryPage(),
+              ),
+            );
           },
           child: Container(
             padding: EdgeInsets.only(bottom: 10, top: 10, right: 10),
