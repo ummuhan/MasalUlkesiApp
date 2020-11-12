@@ -26,19 +26,22 @@ class _HomePageState extends State<HomePage> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Icon(
-                Icons.book,
-                size: 30,
-                color: Colors.green[900],
+              Container(
+                width: MediaQuery.of(context).size.width / 5,
+                child: Image.asset("assets/images/unicorn.png"),
               ),
               Container(
                 child: Center(
-                  child: GradientText("Masal Ülkesi",
-                      gradient: LinearGradient(colors: [
-                        Colors.deepPurple,
-                        Colors.green,
-                        Colors.red
-                      ]),
+                  // child: GradientText("Masal Ülkesi",
+                  //     gradient: LinearGradient(colors: [
+                  //       Colors.deepPurple,
+                  //       Colors.green,
+                  //       Colors.red
+                  //     ]),
+                  //     style:
+                  //         TextStyle(fontSize: 30, fontWeight: FontWeight.w700),
+                  //     textAlign: TextAlign.center),
+                  child: Text("Masal Ülkesi",
                       style:
                           TextStyle(fontSize: 30, fontWeight: FontWeight.w700),
                       textAlign: TextAlign.center),
