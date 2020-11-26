@@ -116,8 +116,8 @@ class _MasalListeState extends State<MasalListe> {
                             ],
                           ),
                           Container(
-                              width: 200,
-                              child: Image.asset("assets/images/unicorn.png")),
+                              //   width: 180,
+                              child: Image.asset("assets/images/lionk.png"))
                         ],
                       );
                     },
