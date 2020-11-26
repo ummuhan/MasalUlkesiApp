@@ -22,22 +22,29 @@ class _SplashScreenState extends State<SplashScreen> {
           MaterialPageRoute(builder: (context) => HomePage()));
     });
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Container(
-            //  width: MediaQuery.of(context).size.width / 2,
-
-            height: MediaQuery.of(context).size.height / 2,
-
-            child: Image.asset("assets/images/deneme.png"),
-          ),
-          Text(
-            "Masal Ülkesi",
-            style: TextStyle(fontSize: 20),
-          )
-        ],
+      body: Container(
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [Colors.pink[200], Colors.purple[300]])),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Center(
+              child: Container(
+                //width: MediaQuery.of(context).size.width / 2,
+                height: MediaQuery.of(context).size.height / 2.5,
+                child: Image.asset("assets/images/unicorn.png"),
+              ),
+            ),
+            // Text(
+            //   "Masal Ülkesi",
+            //   style: TextStyle(fontSize: 20),
+            // )
+          ],
+        ),
       ),
     );
   }

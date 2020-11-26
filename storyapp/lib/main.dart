@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:storyapp/screens/splash_screen.dart';
+import 'package:storyapp/screens/masal_liste.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: SplashScreen(),
+      home: MasalListe(),
     );
   }
 }
