@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:storyapp/Colors/constants.dart';
+import 'package:storyapp/utils/database_helper.dart';
 
 class MasalListe extends StatefulWidget {
   MasalListe({Key key}) : super(key: key);
@@ -12,6 +13,9 @@ class MasalListe extends StatefulWidget {
 class _MasalListeState extends State<MasalListe> {
   @override
   Widget build(BuildContext context) {
+    var databaseHelper = DatabaseHelper();
+    databaseHelper.kategorileriGetir();
+
     return Scaffold(
       backgroundColor: gradientEndColor,
       body: Container(
