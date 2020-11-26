@@ -15,6 +15,11 @@ class _MasalListeState extends State<MasalListe> {
     return Scaffold(
       backgroundColor: gradientEndColor,
       body: Container(
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+                colors: [gradientStartColor, gradientEndColor],
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter)),
         child: SafeArea(
           child: Padding(
             padding: EdgeInsets.all(32),
@@ -51,7 +56,7 @@ class _MasalListeState extends State<MasalListe> {
                   ),
                 ),
                 Container(
-                  height: 500,
+                  height: 400,
                   child: Swiper(
                     itemCount: 5,
                     itemWidth: MediaQuery.of(context).size.width - 2 * 64,
@@ -65,7 +70,7 @@ class _MasalListeState extends State<MasalListe> {
                           Column(
                             children: [
                               SizedBox(
-                                height: 100,
+                                height: 50,
                               ),
                               Card(
                                 elevation: 8,
@@ -124,6 +129,7 @@ class _MasalListeState extends State<MasalListe> {
         ),
       ),
       bottomNavigationBar: Container(
+        //height: MediaQuery.of(context).size.height / 10,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.vertical(
             top: Radius.circular(36.0),
