@@ -62,6 +62,7 @@ class DatabaseHelper {
   }
 
   Future<List<Map<String, dynamic>>> kategorileriGetir() async {
+    //Kategorileri listelememizi sağlar.
     var db = await _getDatabase();
     var sonuc = await db.query("kategoriler");
     debugPrint(sonuc.toString());
