@@ -5,15 +5,16 @@ class Kategori {
   Kategori(this.kategoriAdi);
   Kategori.withID(this.kategoriID, this.kategoriAdi);
 
-  Map<String, dynamic> fromMap() {
+  Map<String, dynamic> toMap() {
     var map = Map<String, dynamic>();
-    this.kategoriID = map['kategoriID'];
-    this.kategoriAdi = map['kategoriAdi'];
-  }
-
-  Kategori.toMap(Map<String, dynamic> map) {
     map['kategoriID'] = this.kategoriID;
     map['kategoriAdi'] = this.kategoriAdi;
+    return map;
+  }
+
+  Kategori.fromMap(Map<String, dynamic> map) {
+    this.kategoriID = map['kategoriID'];
+    this.kategoriAdi = map['kategoriAdi'];
   }
 
   @override

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
+import 'package:sqflite/sqflite.dart';
 import 'package:storyapp/Colors/constants.dart';
+import 'package:storyapp/model/kategori.dart';
 import 'package:storyapp/screens/detail_page.dart';
 import 'package:storyapp/utils/database_helper.dart';
 
@@ -12,11 +14,25 @@ class MasalListe extends StatefulWidget {
 }
 
 class _MasalListeState extends State<MasalListe> {
+  List<Kategori> tumKategoriler;
+  DatabaseHelper databaseHelper;
+  @override
+  void initState() {
+    tumKategoriler = List<Kategori>();
+    databaseHelper = DatabaseHelper();
+    databaseHelper.kategorileriGetir().then((kategorileriIcerenMapListesi) {
+      for (var map in kategorileriIcerenMapListesi) {
+        //Çektiğimiz map verileri nesneyye çevirerek listeye attık.
+        tumKategoriler.add(Kategori.fromMap(map));
+        debugPrint(Kategori.fromMap(map).toString());
+      }
+      setState(() {});
+    });
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
-    var databaseHelper = DatabaseHelper();
-    databaseHelper.kategorileriGetir();
-
     return Scaffold(
       backgroundColor: gradientEndColor,
       body: Container(
@@ -63,7 +79,7 @@ class _MasalListeState extends State<MasalListe> {
                 Container(
                   height: 400,
                   child: Swiper(
-                    itemCount: 5,
+                    itemCount: tumKategoriler.length,
                     itemWidth: MediaQuery.of(context).size.width - 2 * 64,
                     layout: SwiperLayout.STACK,
                     pagination: SwiperPagination(
@@ -87,45 +103,50 @@ class _MasalListeState extends State<MasalListe> {
                                     ),
                                   );
                                 },
-                                child: Card(
-                                  elevation: 8,
-                                  shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(20)),
-                                  child: Padding(
-                                    padding: EdgeInsets.all(32.0),
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        SizedBox(
-                                          height: 100,
-                                        ),
-                                        Text(
-                                          "Hayvan Masalları",
-                                          style: TextStyle(
-                                              fontFamily: 'Avenir',
-                                              fontSize: 30),
-                                          textAlign: TextAlign.left,
-                                        ),
-                                        SizedBox(
-                                          height: 20,
-                                        ),
-                                        Row(
-                                          children: [
-                                            Text(
-                                              "Masal Çeşitleri",
-                                              style: TextStyle(
-                                                  fontFamily: 'Avenir',
-                                                  fontSize: 20),
-                                              textAlign: TextAlign.left,
-                                            ),
-                                            Icon(
-                                              Icons.arrow_forward_ios,
-                                              size: 15,
-                                            )
-                                          ],
-                                        ),
-                                      ],
+                                child: Container(
+                                  height:
+                                      MediaQuery.of(context).size.height / 2.5,
+                                  child: Card(
+                                    elevation: 8,
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(20)),
+                                    child: Padding(
+                                      padding: EdgeInsets.all(32.0),
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          SizedBox(
+                                            height: 100,
+                                          ),
+                                          Text(
+                                            tumKategoriler[index].kategoriAdi,
+                                            style: TextStyle(
+                                                fontFamily: 'Avenir',
+                                                fontSize: 30),
+                                            textAlign: TextAlign.left,
+                                          ),
+                                          SizedBox(
+                                            height: 5,
+                                          ),
+                                          Row(
+                                            children: [
+                                              Text(
+                                                "Masal Çeşitleri",
+                                                style: TextStyle(
+                                                    fontFamily: 'Avenir',
+                                                    fontSize: 20),
+                                                textAlign: TextAlign.left,
+                                              ),
+                                              Icon(
+                                                Icons.arrow_forward_ios,
+                                                size: 15,
+                                              )
+                                            ],
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -134,7 +155,9 @@ class _MasalListeState extends State<MasalListe> {
                           ),
                           Container(
                               //   width: 180,
-                              child: Image.asset("assets/images/lionk.png"))
+                              child: Container(
+                                height: MediaQuery.of(context).size.height/4,
+                                child: Image.asset("assets/images/lion.png")))
                         ],
                       );
                     },
