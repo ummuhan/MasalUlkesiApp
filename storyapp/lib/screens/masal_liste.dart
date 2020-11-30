@@ -47,35 +47,44 @@ class _MasalListeState extends State<MasalListe> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  "Masal Ülkesi",
-                  style: TextStyle(
-                      fontFamily: 'Avenir',
-                      fontSize: 38,
-                      color: Colors.white,
-                      fontWeight: FontWeight.w900),
-                  textAlign: TextAlign.left,
-                ),
-                DropdownButton(
-                  items: [
-                    DropdownMenuItem(
-                      child: Text(
-                        "Masal Çeşitleri",
-                        style: TextStyle(
-                          color: const Color(0x7cdbf1ff),
-                          fontSize: 20,
-                          fontWeight: FontWeight.w400,
-                        ),
-                        textAlign: TextAlign.left,
-                      ),
+                Row(
+                  children: [
+                    Text(
+                      "Masal Ülkesi",
+                      style: TextStyle(
+                          fontFamily: 'Avenir',
+                          fontSize: 38,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w900),
+                      textAlign: TextAlign.left,
                     ),
+                    Container(
+                      width: MediaQuery.of(context).size.width / 5,
+                      child: Image.asset("assets/images/unicorn.png"),
+                    )
                   ],
-                  onChanged: (value) {},
-                  icon: Icon(
-                    Icons.arrow_drop_down,
-                    size: 30,
-                  ),
                 ),
+                SizedBox(height: 10),
+                // DropdownButton(
+                //   items: [
+                //     DropdownMenuItem(
+                //       child: Text(
+                //         "Masal Çeşitleri",
+                //         style: TextStyle(
+                //           color: const Color(0x7cdbf1ff),
+                //           fontSize: 20,
+                //           fontWeight: FontWeight.w400,
+                //         ),
+                //         textAlign: TextAlign.left,
+                //       ),
+                //     ),
+                //   ],
+                //   onChanged: (value) {},
+                //   icon: Icon(
+                //     Icons.arrow_drop_down,
+                //     size: 30,
+                //   ),
+                // ),
                 Container(
                   height: 400,
                   child: Swiper(
@@ -156,45 +165,49 @@ class _MasalListeState extends State<MasalListe> {
                           Container(
                               //   width: 180,
                               child: Container(
-                                height: MediaQuery.of(context).size.height/4,
-                                child: Image.asset("assets/images/lion.png")))
+                                  height:
+                                      MediaQuery.of(context).size.height / 4,
+                                  child: Image.asset(
+                                      "assets/images/homepage_image/resim" +
+                                          index.toString() +
+                                          ".png")))
                         ],
                       );
                     },
                   ),
-                )
+                ),
               ],
             ),
           ),
         ),
       ),
-      bottomNavigationBar: Container(
-        //height: MediaQuery.of(context).size.height / 10,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.vertical(
-            top: Radius.circular(36.0),
-          ),
-          color: navigationColor,
-        ),
-        padding: const EdgeInsets.all(24),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: <Widget>[
-            IconButton(
-              icon: Image.asset('assets/images/menu_icon.png'),
-              onPressed: () {},
-            ),
-            IconButton(
-              icon: Image.asset('assets/images/search_icon.png'),
-              onPressed: () {},
-            ),
-            IconButton(
-              icon: Image.asset('assets/images/profile_icon.png'),
-              onPressed: () {},
-            ),
-          ],
-        ),
-      ),
+      // bottomNavigationBar: Container(
+      //   //height: MediaQuery.of(context).size.height / 10,
+      //   decoration: BoxDecoration(
+      //     borderRadius: BorderRadius.vertical(
+      //       top: Radius.circular(36.0),
+      //     ),
+      //     color: navigationColor,
+      //   ),
+      //   padding: const EdgeInsets.all(24),
+      //   child: Row(
+      //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      //     children: <Widget>[
+      //       IconButton(
+      //         icon: Image.asset('assets/images/menu_icon.png'),
+      //         onPressed: () {},
+      //       ),
+      //       IconButton(
+      //         icon: Image.asset('assets/images/search_icon.png'),
+      //         onPressed: () {},
+      //       ),
+      //       IconButton(
+      //         icon: Image.asset('assets/images/profile_icon.png'),
+      //         onPressed: () {},
+      //       ),
+      //     ],
+      //   ),
+      // ),
     );
   }
 }
