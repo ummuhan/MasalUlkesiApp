@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:storyapp/Colors/constants.dart';
 
 class DetailPage extends StatelessWidget {
@@ -7,8 +6,8 @@ class DetailPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: ListView(
+    return Container(
+        child: ListView(
       children: [
         Stack(
           children: [

@@ -1,3 +1,4 @@
+import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:sqflite/sqflite.dart';
@@ -34,6 +35,26 @@ class _MasalListeState extends State<MasalListe> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: ConvexAppBar(
+        style: TabStyle.titled,
+        //   color: Colors.white,
+        backgroundColor: gradientStartColor,
+        //  activeColor: Colors.white,
+
+        items: [
+          TabItem(
+              icon: Image.asset("assets/images/tabbar_icons/hakkımızda.png"),
+              title: 'Hakkımızda'),
+          TabItem(
+              icon: Image.asset("assets/images/tabbar_icons/anasayfa.png"),
+              title: 'Anasayfa'),
+          TabItem(
+              icon: Image.asset("assets/images/tabbar_icons/tummasallar.png"),
+              title: 'Tüm Masallar'),
+        ],
+        initialActiveIndex: 1, //optional, default as 0
+        onTap: (int i) => print('click index=$i'),
+      ),
       backgroundColor: gradientEndColor,
       body: Container(
         decoration: BoxDecoration(
@@ -53,38 +74,38 @@ class _MasalListeState extends State<MasalListe> {
                       "Masal Ülkesi",
                       style: TextStyle(
                           fontFamily: 'Avenir',
-                          fontSize: 38,
+                          fontSize: 30,
                           color: Colors.white,
                           fontWeight: FontWeight.w900),
                       textAlign: TextAlign.left,
                     ),
                     Container(
-                      width: MediaQuery.of(context).size.width / 5,
+                      width: MediaQuery.of(context).size.width / 9,
                       child: Image.asset("assets/images/unicorn.png"),
                     )
                   ],
                 ),
-                SizedBox(height: 10),
-                // DropdownButton(
-                //   items: [
-                //     DropdownMenuItem(
-                //       child: Text(
-                //         "Masal Çeşitleri",
-                //         style: TextStyle(
-                //           color: const Color(0x7cdbf1ff),
-                //           fontSize: 20,
-                //           fontWeight: FontWeight.w400,
-                //         ),
-                //         textAlign: TextAlign.left,
-                //       ),
-                //     ),
-                //   ],
-                //   onChanged: (value) {},
-                //   icon: Icon(
-                //     Icons.arrow_drop_down,
-                //     size: 30,
-                //   ),
-                // ),
+                //   SizedBox(height: 10),
+                DropdownButton(
+                  items: [
+                    DropdownMenuItem(
+                      child: Text(
+                        "Masal Çeşitleri",
+                        style: TextStyle(
+                          color: const Color(0x7cdbf1ff),
+                          fontSize: 20,
+                          fontWeight: FontWeight.w400,
+                        ),
+                        textAlign: TextAlign.left,
+                      ),
+                    ),
+                  ],
+                  onChanged: (value) {},
+                  icon: Icon(
+                    Icons.arrow_drop_down,
+                    size: 30,
+                  ),
+                ),
                 Container(
                   height: 400,
                   child: Swiper(

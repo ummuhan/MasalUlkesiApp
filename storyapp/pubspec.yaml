@@ -31,6 +31,7 @@ dependencies:
   cupertino_icons: ^1.0.0
   flutter_swiper: ^1.1.6
   sqflite: ^1.3.2+1
+  convex_bottom_bar: ^2.6.0
 
 
 dev_dependencies:
@@ -53,6 +54,7 @@ flutter:
     - assets/images/
     - assets/database/masalapp.db
     - assets/images/homepage_image/
+    - assets/images/tabbar_icons/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
