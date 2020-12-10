@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:storyapp/screens/detail_page.dart';
-import 'package:storyapp/screens/masal_liste.dart';
+import 'package:storyapp/screens/homepage.dart';
 
 void main() {
   runApp(MyApp());

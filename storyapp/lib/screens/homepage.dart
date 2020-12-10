@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:storyapp/Colors/constants.dart';
+import 'package:storyapp/Commons/collapsing_navigation_drawer.dart';
 import 'package:storyapp/model/kategori.dart';
+import 'package:storyapp/screens/all_tale_page.dart';
 import 'package:storyapp/screens/detail_page.dart';
 import 'package:storyapp/utils/database_helper.dart';
 
@@ -15,6 +17,8 @@ class MasalListe extends StatefulWidget {
 }
 
 class _MasalListeState extends State<MasalListe> {
+  int selectedPage = 0;
+  final _pageOptions = [AllTalePage(), MasalListe(), AllTalePage()];
   List<Kategori> tumKategoriler;
   DatabaseHelper databaseHelper;
   @override
@@ -35,27 +39,7 @@ class _MasalListeState extends State<MasalListe> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: ConvexAppBar(
-        style: TabStyle.titled,
-        //   color: Colors.white,
-        backgroundColor: gradientStartColor,
-        //  activeColor: Colors.white,
-
-        items: [
-          TabItem(
-              icon: Image.asset("assets/images/tabbar_icons/hakkımızda.png"),
-              title: 'Hakkımızda'),
-          TabItem(
-              icon: Image.asset("assets/images/tabbar_icons/anasayfa.png"),
-              title: 'Anasayfa'),
-          TabItem(
-              icon: Image.asset("assets/images/tabbar_icons/tummasallar.png"),
-              title: 'Tüm Masallar'),
-        ],
-        initialActiveIndex: 1, //optional, default as 0
-        onTap: (int i) => print('click index=$i'),
-      ),
-      backgroundColor: gradientEndColor,
+      drawer: CollapsingNavigationDrawer(),
       body: Container(
         decoration: BoxDecoration(
             gradient: LinearGradient(
@@ -202,33 +186,6 @@ class _MasalListeState extends State<MasalListe> {
           ),
         ),
       ),
-      // bottomNavigationBar: Container(
-      //   //height: MediaQuery.of(context).size.height / 10,
-      //   decoration: BoxDecoration(
-      //     borderRadius: BorderRadius.vertical(
-      //       top: Radius.circular(36.0),
-      //     ),
-      //     color: navigationColor,
-      //   ),
-      //   padding: const EdgeInsets.all(24),
-      //   child: Row(
-      //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      //     children: <Widget>[
-      //       IconButton(
-      //         icon: Image.asset('assets/images/menu_icon.png'),
-      //         onPressed: () {},
-      //       ),
-      //       IconButton(
-      //         icon: Image.asset('assets/images/search_icon.png'),
-      //         onPressed: () {},
-      //       ),
-      //       IconButton(
-      //         icon: Image.asset('assets/images/profile_icon.png'),
-      //         onPressed: () {},
-      //       ),
-      //     ],
-      //   ),
-      // ),
     );
   }
 }

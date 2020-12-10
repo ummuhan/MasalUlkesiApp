@@ -6,8 +6,8 @@ class DetailPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        child: ListView(
+    return Scaffold(
+        body: ListView(
       children: [
         Stack(
           children: [
@@ -39,6 +39,10 @@ class DetailPage extends StatelessWidget {
                 ),
                 Column(
                   children: [
+                    buildMasalContainer(context),
+                    buildMasalContainer(context),
+                    buildMasalContainer(context),
+                    buildMasalContainer(context),
                     buildMasalContainer(context),
                   ],
                 )
