@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:storyapp/Colors/constants.dart';
 import 'package:storyapp/screens/detail_page.dart';
 import 'package:storyapp/screens/homepage.dart';
 
@@ -11,9 +12,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      
       debugShowCheckedModeBanner: false,
       title: 'Masal Ülkesi',
       theme: ThemeData(
+        primaryColor: gradientStartColor,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: MasalListe(),

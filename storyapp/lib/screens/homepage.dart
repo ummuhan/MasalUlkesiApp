@@ -39,6 +39,7 @@ class _MasalListeState extends State<MasalListe> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       drawer: CollapsingNavigationDrawer(),
       body: Container(
         decoration: BoxDecoration(
