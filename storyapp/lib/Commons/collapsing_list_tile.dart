@@ -22,7 +22,7 @@ class _CollapsingListTileState extends State<CollapsingListTile> {
     // TODO: implement initState
     super.initState();
     widthAnimation =
-        Tween<double>(begin: 250, end: 60).animate(widget.animationController);
+        Tween<double>(begin: 60, end: 230).animate(widget.animationController);
     sizeBoxAnimation =
         Tween<double>(begin: 10, end: 0).animate(widget.animationController);
   }
@@ -37,12 +37,12 @@ class _CollapsingListTileState extends State<CollapsingListTile> {
           Icon(
             widget.icon,
             color: Colors.deepPurple[200],
-            size: 38.0,
+            size: 30.0,
           ),
           SizedBox(
             width: sizeBoxAnimation.value,
           ),
-          (widthAnimation.value >= 220)
+          (widthAnimation.value >= 180)
               ? Text(
                   widget.title,
                   style: listTitleDefaultTextStyle,

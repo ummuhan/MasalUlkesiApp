@@ -13,7 +13,7 @@ class CollapsingNavigationDrawer extends StatefulWidget {
 
 class _CollapsingNavigationDrawerState extends State<CollapsingNavigationDrawer>
     with SingleTickerProviderStateMixin {
-  double maxWidth = 250;
+  double maxWidth = 230;
   double minWidth = 60;
   bool isCollapsed = false;
   AnimationController _animationController;
@@ -22,9 +22,9 @@ class _CollapsingNavigationDrawerState extends State<CollapsingNavigationDrawer>
   void initState() {
     // TODO: implement initState
     super.initState();
-    _animationController =
-        AnimationController(vsync: this, duration: Duration(milliseconds: 300));
-    widthAnimation = Tween<double>(begin: maxWidth, end: minWidth)
+    _animationController = AnimationController(
+        vsync: this, duration: Duration(milliseconds: 1000));
+    widthAnimation = Tween<double>(begin: minWidth, end: maxWidth)
         .animate(_animationController);
   }
 
@@ -53,15 +53,18 @@ class _CollapsingNavigationDrawerState extends State<CollapsingNavigationDrawer>
             height: 20,
           ),
           Expanded(
-            child: ListView.builder(
-              itemBuilder: (context, counter) {
-                return CollapsingListTile(
-                  title: navigationsItem[counter].title,
-                  icon: navigationsItem[counter].icon,
-                  animationController: _animationController,
-                );
-              },
-              itemCount: navigationsItem.length,
+            child: Container(
+              margin: EdgeInsets.only(bottom: 10),
+              child: ListView.builder(
+                itemBuilder: (context, counter) {
+                  return CollapsingListTile(
+                    title: navigationsItem[counter].title,
+                    icon: navigationsItem[counter].icon,
+                    animationController: _animationController,
+                  );
+                },
+                itemCount: navigationsItem.length,
+              ),
             ),
           ),
           InkWell(
@@ -74,10 +77,10 @@ class _CollapsingNavigationDrawerState extends State<CollapsingNavigationDrawer>
                 });
               },
               child: AnimatedIcon(
-                  icon: AnimatedIcons.close_menu,
+                  icon: AnimatedIcons.menu_close,
                   progress: _animationController,
                   color: Colors.white,
-                  size: 50.0))
+                  size: 50.0)),
         ],
       ),
     );

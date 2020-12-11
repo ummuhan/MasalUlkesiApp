@@ -17,6 +17,7 @@ class MasalListe extends StatefulWidget {
 }
 
 class _MasalListeState extends State<MasalListe> {
+  bool geldiMi = false;
   int selectedPage = 0;
   final _pageOptions = [AllTalePage(), MasalListe(), AllTalePage()];
   List<Kategori> tumKategoriler;
@@ -31,6 +32,7 @@ class _MasalListeState extends State<MasalListe> {
         tumKategoriler.add(Kategori.fromMap(map));
         debugPrint(Kategori.fromMap(map).toString());
       }
+      geldiMi = true;
       setState(() {});
     });
     super.initState();
@@ -42,7 +44,6 @@ class _MasalListeState extends State<MasalListe> {
       appBar: AppBar(
         elevation: 0.0,
       ),
-    
       body: Stack(
         children: [
           Container(
@@ -77,125 +78,112 @@ class _MasalListeState extends State<MasalListe> {
                         ],
                       ),
                     ),
-
-                    // DropdownButton(
-                    //   items: [
-                    //     DropdownMenuItem(
-                    //       child: Text(
-                    //         "Masal Çeşitleri",
-                    //         style: TextStyle(
-                    //           color: const Color(0x7cdbf1ff),
-                    //           fontSize: 20,
-                    //           fontWeight: FontWeight.w400,
-                    //         ),
-                    //         textAlign: TextAlign.left,
-                    //       ),
-                    //     ),
-                    //   ],
-                    //   onChanged: (value) {},
-                    //   icon: Icon(
-                    //     Icons.arrow_drop_down,
-                    //     size: 30,
-                    //   ),
-                    // ),
-
-                    Container(
-                      margin: EdgeInsets.only(left: 50),
-                      height: 400,
-                      child: Swiper(
-                        itemCount: tumKategoriler.length,
-                        itemWidth: MediaQuery.of(context).size.width - 2 * 64,
-                        layout: SwiperLayout.STACK,
-                        pagination: SwiperPagination(
-                            builder: DotSwiperPaginationBuilder(
-                                activeSize: 20, space: 8)),
-                        itemBuilder: (context, index) {
-                          return Stack(
-                            children: [
-                              Column(
-                                children: [
-                                  SizedBox(
-                                    height: 70,
-                                  ),
-                                  InkWell(
-                                    onTap: () {
-                                      Navigator.push(
-                                        context,
-                                        PageRouteBuilder(
-                                          pageBuilder: (context, a, b) =>
-                                              DetailPage(),
+                    geldiMi
+                        ? Container(
+                            margin: EdgeInsets.only(left: 50),
+                            height: 400,
+                            child: Swiper(
+                              itemCount: tumKategoriler.length,
+                              itemWidth:
+                                  MediaQuery.of(context).size.width - 2 * 64,
+                              layout: SwiperLayout.STACK,
+                              pagination: SwiperPagination(
+                                  builder: DotSwiperPaginationBuilder(
+                                      activeSize: 20, space: 8)),
+                              itemBuilder: (context, index) {
+                                return Stack(
+                                  children: [
+                                    Column(
+                                      children: [
+                                        SizedBox(
+                                          height: 70,
                                         ),
-                                      );
-                                    },
-                                    child: Container(
-                                      height:
-                                          MediaQuery.of(context).size.height /
-                                              2.5,
-                                      child: Card(
-                                        elevation: 8,
-                                        shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(20)),
-                                        child: Padding(
-                                          padding: EdgeInsets.all(32.0),
-                                          child: Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              SizedBox(
-                                                height: 100,
+                                        InkWell(
+                                          onTap: () {
+                                            Navigator.push(
+                                              context,
+                                              PageRouteBuilder(
+                                                pageBuilder: (context, a, b) =>
+                                                    DetailPage(),
                                               ),
-                                              Text(
-                                                tumKategoriler[index]
-                                                    .kategoriAdi,
-                                                style: TextStyle(
-                                                    fontFamily: 'Avenir',
-                                                    fontSize: 30),
-                                                textAlign: TextAlign.left,
+                                            );
+                                          },
+                                          child: Container(
+                                            height: MediaQuery.of(context)
+                                                    .size
+                                                    .height /
+                                                2.5,
+                                            child: Card(
+                                              elevation: 8,
+                                              shape: RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          20)),
+                                              child: Padding(
+                                                padding: EdgeInsets.all(32.0),
+                                                child: Column(
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    SizedBox(
+                                                      height: 100,
+                                                    ),
+                                                    Text(
+                                                      tumKategoriler[index]
+                                                          .kategoriAdi,
+                                                      style: TextStyle(
+                                                          fontFamily: 'Avenir',
+                                                          fontSize: 30),
+                                                      textAlign: TextAlign.left,
+                                                    ),
+                                                    SizedBox(
+                                                      height: 5,
+                                                    ),
+                                                    Row(
+                                                      children: [
+                                                        Text(
+                                                          "Masal Çeşitleri",
+                                                          style: TextStyle(
+                                                              fontFamily:
+                                                                  'Avenir',
+                                                              fontSize: 20),
+                                                          textAlign:
+                                                              TextAlign.left,
+                                                        ),
+                                                        Icon(
+                                                          Icons
+                                                              .arrow_forward_ios,
+                                                          size: 15,
+                                                        )
+                                                      ],
+                                                    ),
+                                                  ],
+                                                ),
                                               ),
-                                              SizedBox(
-                                                height: 5,
-                                              ),
-                                              Row(
-                                                children: [
-                                                  Text(
-                                                    "Masal Çeşitleri",
-                                                    style: TextStyle(
-                                                        fontFamily: 'Avenir',
-                                                        fontSize: 20),
-                                                    textAlign: TextAlign.left,
-                                                  ),
-                                                  Icon(
-                                                    Icons.arrow_forward_ios,
-                                                    size: 15,
-                                                  )
-                                                ],
-                                              ),
-                                            ],
+                                            ),
                                           ),
-                                        ),
-                                      ),
+                                        )
+                                      ],
                                     ),
-                                  )
-                                ],
-                              ),
-                              Container(
+                                    Container(
 
-                                  //   width: 180,
+                                        //   width: 180,
 
-                                  child: Container(
-                                      height:
-                                          MediaQuery.of(context).size.height /
-                                              4,
-                                      child: Image.asset(
-                                          "assets/images/homepage_image/resim" +
-                                              index.toString() +
-                                              ".png")))
-                            ],
-                          );
-                        },
-                      ),
-                    ),
+                                        child: Container(
+                                            height: MediaQuery.of(context)
+                                                    .size
+                                                    .height /
+                                                4,
+                                            child: Image.asset(
+                                                "assets/images/homepage_image/resim" +
+                                                    index.toString() +
+                                                    ".png")))
+                                  ],
+                                );
+                              },
+                            ),
+                          )
+                        : CircularProgressIndicator(),
                   ],
                 ),
               ),
