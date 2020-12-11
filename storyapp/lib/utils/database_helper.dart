@@ -4,7 +4,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
-import 'package:synchronized/synchronized.dart';
 
 class DatabaseHelper {
   static DatabaseHelper _databaseHelper;
@@ -65,6 +64,13 @@ class DatabaseHelper {
     //Kategorileri listelememizi sağlar.
     var db = await _getDatabase();
     var sonuc = await db.query("kategoriler");
+    debugPrint(sonuc.toString());
+    return sonuc;
+  }
+
+  Future<List<Map<String, dynamic>>> tumMallariGetir() async {
+    var db = await _getDatabase();
+    var sonuc = await db.query("masallar");
     debugPrint(sonuc.toString());
     return sonuc;
   }
