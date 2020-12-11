@@ -13,14 +13,14 @@ class CollapsingNavigationDrawer extends StatefulWidget {
 
 class _CollapsingNavigationDrawerState extends State<CollapsingNavigationDrawer>
     with SingleTickerProviderStateMixin {
-  double maxWidth = 230;
+  double maxWidth = 200;
   double minWidth = 60;
   bool isCollapsed = false;
   AnimationController _animationController;
   Animation<double> widthAnimation;
+  int currentSelectedIndex = 0;
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _animationController = AnimationController(
         vsync: this, duration: Duration(milliseconds: 1000));
@@ -49,15 +49,24 @@ class _CollapsingNavigationDrawerState extends State<CollapsingNavigationDrawer>
             width: MediaQuery.of(context).size.width / 7,
             child: Image.asset("assets/images/unicorn.png"),
           ),
-          SizedBox(
-            height: 20,
+          Divider(
+            color: Colors.grey,
+            height: 50.0,
           ),
           Expanded(
             child: Container(
               margin: EdgeInsets.only(bottom: 10),
-              child: ListView.builder(
+              child: ListView.separated(
+                separatorBuilder: (context, counter) {
+                  return Divider(
+                    color: Colors.grey[400],
+                    height: 20.0,
+                  );
+                },
                 itemBuilder: (context, counter) {
                   return CollapsingListTile(
+                    onTap: () {},
+                    isSelected: currentSelectedIndex==counter,
                     title: navigationsItem[counter].title,
                     icon: navigationsItem[counter].icon,
                     animationController: _animationController,

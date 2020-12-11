@@ -13,3 +13,5 @@ TextStyle listTitleDefaultTextStyle = TextStyle(
     color: Colors.white70, fontSize: 20.0, fontWeight: FontWeight.w600);
 TextStyle listTitleSelectedTextStyle =
     TextStyle(color: Colors.white, fontSize: 20.0, fontWeight: FontWeight.w600);
+TextStyle defaultTextStyle =
+    TextStyle(fontFamily: 'Avenir', fontSize: 20, color: Colors.white70);
