@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:storyapp/Colors/constants.dart';
+import 'package:storyapp/screens/all_tale_page.dart';
+import 'package:storyapp/screens/detail_page.dart';
 
 class CollapsingListTile extends StatefulWidget {
   final String title;
@@ -34,8 +36,9 @@ class _CollapsingListTileState extends State<CollapsingListTile> {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: (){
-
+      onTap: () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => AllTalePage()));
       },
       child: Container(
         width: widthAnimation.value,
