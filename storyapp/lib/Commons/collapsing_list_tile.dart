@@ -5,11 +5,11 @@ class CollapsingListTile extends StatefulWidget {
   final String title;
   final IconData icon;
   final AnimationController animationController;
-  CollapsingListTile(
-      {@required this.title,
-      @required this.icon,
-      @required this.animationController,
-      });
+  CollapsingListTile({
+    @required this.title,
+    @required this.icon,
+    @required this.animationController,
+  });
 
   @override
   _CollapsingListTileState createState() => _CollapsingListTileState();
@@ -36,7 +36,7 @@ class _CollapsingListTileState extends State<CollapsingListTile> {
         children: [
           Icon(
             widget.icon,
-            color: Colors.white30,
+            color: Colors.deepPurple[200],
             size: 38.0,
           ),
           SizedBox(

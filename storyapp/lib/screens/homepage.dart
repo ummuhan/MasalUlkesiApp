@@ -42,7 +42,7 @@ class _MasalListeState extends State<MasalListe> {
       appBar: AppBar(
         elevation: 0.0,
       ),
-      //  drawer: CollapsingNavigationDrawer(),
+    
       body: Stack(
         children: [
           Container(
@@ -55,50 +55,52 @@ class _MasalListeState extends State<MasalListe> {
               child: Padding(
                 padding: EdgeInsets.all(32),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Row(
-                      children: [
-                        Text(
-                          "Masal Ülkesi",
-                          style: TextStyle(
-                              fontFamily: 'Avenir',
-                              fontSize: 30,
-                              color: Colors.white,
-                              fontWeight: FontWeight.w900),
-                          textAlign: TextAlign.left,
-                        ),
-                        Container(
-                          width: MediaQuery.of(context).size.width / 9,
-                          child: Image.asset("assets/images/unicorn.png"),
-                        )
-                      ],
-                    ),
-
-                    //   SizedBox(height: 10),
-
-                    DropdownButton(
-                      items: [
-                        DropdownMenuItem(
-                          child: Text(
-                            "Masal Çeşitleri",
+                    Container(
+                      margin: EdgeInsets.only(left: 50),
+                      child: Row(
+                        children: [
+                          Text(
+                            "Masal Ülkesi",
                             style: TextStyle(
-                              color: const Color(0x7cdbf1ff),
-                              fontSize: 20,
-                              fontWeight: FontWeight.w400,
-                            ),
-                            textAlign: TextAlign.left,
+                                fontFamily: 'Avenir',
+                                fontSize: 30,
+                                color: Colors.white,
+                                fontWeight: FontWeight.w900),
+                            textAlign: TextAlign.right,
                           ),
-                        ),
-                      ],
-                      onChanged: (value) {},
-                      icon: Icon(
-                        Icons.arrow_drop_down,
-                        size: 30,
+                          Container(
+                            width: MediaQuery.of(context).size.width / 9,
+                            child: Image.asset("assets/images/unicorn.png"),
+                          )
+                        ],
                       ),
                     ),
 
+                    // DropdownButton(
+                    //   items: [
+                    //     DropdownMenuItem(
+                    //       child: Text(
+                    //         "Masal Çeşitleri",
+                    //         style: TextStyle(
+                    //           color: const Color(0x7cdbf1ff),
+                    //           fontSize: 20,
+                    //           fontWeight: FontWeight.w400,
+                    //         ),
+                    //         textAlign: TextAlign.left,
+                    //       ),
+                    //     ),
+                    //   ],
+                    //   onChanged: (value) {},
+                    //   icon: Icon(
+                    //     Icons.arrow_drop_down,
+                    //     size: 30,
+                    //   ),
+                    // ),
+
                     Container(
+                      margin: EdgeInsets.only(left: 50),
                       height: 400,
                       child: Swiper(
                         itemCount: tumKategoriler.length,
@@ -113,7 +115,7 @@ class _MasalListeState extends State<MasalListe> {
                               Column(
                                 children: [
                                   SizedBox(
-                                    height: 50,
+                                    height: 70,
                                   ),
                                   InkWell(
                                     onTap: () {

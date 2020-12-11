@@ -38,16 +38,19 @@ class _CollapsingNavigationDrawerState extends State<CollapsingNavigationDrawer>
   getWidget(context, builder) {
     return Container(
       width: widthAnimation.value,
-      color: drawerBackgroundColor,
+      decoration: BoxDecoration(
+          gradient: LinearGradient(
+              colors: [gradientStartColor, gradientEndColor],
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter)),
       child: Column(
         children: [
+          Container(
+            width: MediaQuery.of(context).size.width / 7,
+            child: Image.asset("assets/images/unicorn.png"),
+          ),
           SizedBox(
             height: 20,
-          ),
-          CollapsingListTile(
-            title: "Masal Ülkesi",
-            icon: Icons.taxi_alert,
-            animationController: _animationController,
           ),
           Expanded(
             child: ListView.builder(
