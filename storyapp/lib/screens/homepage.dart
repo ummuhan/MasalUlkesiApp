@@ -18,7 +18,7 @@ class MasalListe extends StatefulWidget {
 
 class _MasalListeState extends State<MasalListe> {
   bool geldiMi = false;
-  int selectedPage = 0;
+
   final _pageOptions = [AllTalePage(), MasalListe(), AllTalePage()];
   List<Kategori> tumKategoriler;
   DatabaseHelper databaseHelper;
@@ -26,6 +26,7 @@ class _MasalListeState extends State<MasalListe> {
   void initState() {
     tumKategoriler = List<Kategori>();
     databaseHelper = DatabaseHelper();
+
     databaseHelper.kategorileriGetir().then((kategorileriIcerenMapListesi) {
       for (var map in kategorileriIcerenMapListesi) {
         //Çektiğimiz map verileri nesneyye çevirerek listeye attık.

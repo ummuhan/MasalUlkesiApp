@@ -1,8 +1,33 @@
 import 'package:flutter/material.dart';
 import 'package:storyapp/Colors/constants.dart';
+import 'package:storyapp/model/masal.dart';
+import 'package:storyapp/utils/database_helper.dart';
 
-class AllTalePage extends StatelessWidget {
+class AllTalePage extends StatefulWidget {
   const AllTalePage({Key key}) : super(key: key);
+
+  @override
+  _AllTalePageState createState() => _AllTalePageState();
+}
+
+class _AllTalePageState extends State<AllTalePage> {
+  bool geldiMi = false; //Verilerin tam olarak gelip gelmedğini kontrol eder.
+  List<Masal> tumMasallar;
+  DatabaseHelper databaseHelper;
+  @override
+  void initState() {
+    databaseHelper = DatabaseHelper();
+    databaseHelper.tumMallariGetir().then((masallariIcerenMapListesi) {
+      for (var map in masallariIcerenMapListesi) {
+        //Çektiğimiz map verileri nesneyye çevirerek listeye attık.
+        tumMasallar.add(Masal.fromMap(map));
+        debugPrint(Masal.fromMap(map).toString());
+      }
+      geldiMi = true;
+      setState(() {});
+    });
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -38,12 +63,15 @@ class AllTalePage extends StatelessWidget {
                     Divider(
                       color: Colors.black38,
                     ),
-                    Column(
-                      children: [
-                        buildMasalContainer(context),
-                        buildMasalContainer(context),
-                      ],
-                    ),
+                    geldiMi
+                        ? ListView.builder(
+                            itemCount: tumMasallar.length,
+                            itemBuilder: (context, index) {
+                              return ListTile(
+                                title: Text('${tumMasallar[index]}'),
+                              );
+                            })
+                        : CircularProgressIndicator(),
                   ],
                 ),
                 Positioned(
@@ -66,44 +94,4 @@ class AllTalePage extends StatelessWidget {
           ],
         ));
   }
-}
-
-Container buildMasalContainer(BuildContext context) {
-  return Container(
-      margin: EdgeInsets.all(10),
-      decoration: BoxDecoration(
-          border: Border.all(color: Colors.grey),
-          color: Colors.white60,
-          borderRadius: BorderRadius.circular(20)),
-      width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height / 5,
-      padding: EdgeInsets.all(10),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          Expanded(
-            child: Container(
-              width: MediaQuery.of(context).size.width / 4,
-              child: Image.asset(
-                "assets/images/village.jpg",
-                fit: BoxFit.cover,
-              ),
-            ),
-            flex: 2,
-          ),
-          Expanded(
-            child: Container(
-                child: Text(
-              "Şakın Sincap",
-              style: TextStyle(
-                  fontFamily: 'Avenir',
-                  fontSize: 30,
-                  color: primaryTextColor,
-                  fontWeight: FontWeight.w900),
-              textAlign: TextAlign.center,
-            )),
-            flex: 4,
-          )
-        ],
-      ));
 }
