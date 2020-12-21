@@ -55,6 +55,9 @@ flutter:
     - assets/database/masalapp.db
     - assets/images/homepage_image/
     - assets/images/tabbar_icons/
+    - assets/kategori.json
+    - assets/masal.json
+    - assets/images/kategori/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
