@@ -1,8 +1,37 @@
-import 'package:flutter/material.dart';
-import 'package:storyapp/Colors/constants.dart';
+import 'dart:convert';
 
-class DetailPage extends StatelessWidget {
-  const DetailPage({Key key}) : super(key: key);
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:storyapp/Colors/constants.dart';
+import 'package:storyapp/model/masal.dart';
+
+class DetailPage extends StatefulWidget {
+  int index;
+  String name;
+  String image;
+  DetailPage({this.index, this.name, this.image});
+
+  @override
+  _DetailPageState createState() => _DetailPageState();
+}
+
+class _DetailPageState extends State<DetailPage> {
+  List<Masal> masalList = List<Masal>();
+  final String localJsonPath = 'assets/masal.json';
+
+//   Future<void> loadLocalJson() async {
+//     var masalData = await rootBundle.loadString(localJsonPath);
+//     List<dynamic> decodedJson = json.decode(masalData);
+//     masalList = decodedJson.map((user) => Masal.fromMap(user)).toList();
+//     setState(() {
+//       return masalList;
+//     });
+// }
+  @override
+  void initState() {
+    super.initState();
+    //  loadLocalJson();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +47,7 @@ class DetailPage extends StatelessWidget {
                       height: 200,
                     ),
                     Text(
-                      "Hayvan Masalları",
+                      widget.name,
                       style: TextStyle(
                           fontFamily: 'Avenir',
                           fontSize: 30,
@@ -41,26 +70,19 @@ class DetailPage extends StatelessWidget {
                     Column(
                       children: [
                         buildMasalContainer(context),
-                        buildMasalContainer(context),
-                        buildMasalContainer(context),
-                        buildMasalContainer(context),
-                        buildMasalContainer(context),
                       ],
                     ),
                   ],
                 ),
                 Positioned(
-                  // right: 40,
-                  // top: 40,
                   child: Hero(
                       tag: "",
                       child: Center(
                         child: Container(
                             width: MediaQuery.of(context).size.width / 2,
-                            child: Image.asset("assets/images/lion.png")),
+                            child: Image.asset("${widget.image}")),
                       )),
                 ),
-                
                 IconButton(
                   icon: Icon(Icons.arrow_back_ios),
                   onPressed: () {
@@ -79,8 +101,6 @@ class DetailPage extends StatelessWidget {
         decoration: BoxDecoration(
             border: Border.all(),
             color: Colors.white60,
-
-        
             borderRadius: BorderRadius.circular(20)),
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height / 5,

@@ -83,7 +83,7 @@ class _MasalListeState extends State<MasalListe> {
                           ],
                         ),
                       ),
-                      SizedBox(height: MediaQuery.of(context).size.height/20),
+                      SizedBox(height: MediaQuery.of(context).size.height / 20),
                       kategoriList.length == 0
                           ? const Center(child: const Text("Loading..."))
                           : Container(
@@ -110,9 +110,20 @@ class _MasalListeState extends State<MasalListe> {
                                               Navigator.push(
                                                 context,
                                                 PageRouteBuilder(
-                                                  pageBuilder:
-                                                      (context, a, b) =>
-                                                          DetailPage(),
+                                                  pageBuilder: (context, a,
+                                                          b) =>
+                                                      DetailPage(
+                                                          index: kategoriList[
+                                                                  index]
+                                                              .kategoriID,
+                                                          name: kategoriList[
+                                                                  index]
+                                                              .kategoriAdi,
+                                                          image: "assets/images/kategori/" +
+                                                              kategoriList[
+                                                                      index]
+                                                                  .kategoriResim +
+                                                              ".png"),
                                                 ),
                                               );
                                             },
