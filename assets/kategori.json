@@ -1,0 +1,28 @@
+[
+    {
+        "kategoriID":0,
+        "kategoriAdi": "Hayvan Masalları",
+        "kategoriResim": "hayvan"
+    },
+  
+    {
+        "kategoriID": 1,     
+        "kategoriAdi": "Komik Masallar",
+        "kategoriResim": "komik"
+    },
+    {
+        "kategoriID":2, 
+        "kategoriAdi": "İngilizce Masallar",    
+         "kategoriResim": "ingilizce"
+    },
+    {
+        "kategoriID": 3,
+        "kategoriAdi": "Fıkralar",   
+        "kategoriResim": "fikralar"
+    },
+    {
+        "kategoriID":4,  
+        "kategoriAdi": "Bilmeceler",
+        "kategoriResim": "bilmeceler"
+    }
+]
