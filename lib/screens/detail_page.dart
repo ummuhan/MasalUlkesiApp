@@ -19,18 +19,19 @@ class _DetailPageState extends State<DetailPage> {
   List<Masal> masalList = List<Masal>();
   final String localJsonPath = 'assets/masal.json';
 
-//   Future<void> loadLocalJson() async {
-//     var masalData = await rootBundle.loadString(localJsonPath);
-//     List<dynamic> decodedJson = json.decode(masalData);
-//     masalList = decodedJson.map((user) => Masal.fromMap(user)).toList();
-//     setState(() {
-//       return masalList;
-//     });
-// }
+  Future<void> loadLocalJson() async {
+    var masalData = await rootBundle.loadString(localJsonPath);
+    List<dynamic> decodedJson = json.decode(masalData);
+    masalList = decodedJson.map((user) => Masal.fromMap(user)).toList();
+    setState(() {
+      return masalList;
+    });
+  }
+
   @override
   void initState() {
     super.initState();
-      //loadLocalJson();
+    loadLocalJson();
   }
 
   @override

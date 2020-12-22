@@ -1,46 +1,47 @@
-[ 
+[
     {
-        "masalID":0,
-        "kategoriID":0,
-        "masalAdi":"Kurnaz Tilki",
-        "masalMetni":"Günlerden bir gün, çok çok uzak ülkelerden birinde çok büyük bir orman varmış. Bu kocaman ormanın içinde sayısız çeşit hayvan yaşarmış. Bu hayvanların biri tilkiymiş. Bu tilki çok kurnaz ve açıkgöz bir hayvanmış. Herkesle dalga geçer ve diğer hayvanlara karşı çok saygısızmış.\n Bir gün bu kurnaz tilkinin canı çok sıkılmış ve ormanda gezintiye çıkmış. Ormanda gezerken kendi kendine konuşuyormuş ” Canım çok sıkılıyor. Keşke şimdi bir olsa da dalga geçip kendimi eğlendirsem.” diye etrafına bakınarak ormanda yürüyormuş. Kocaman ormanda öylece etrafına bakarak gezinirken, birden ağaçların arasından uçan beyaz leyleği görmüş. O anda leylek ile dalga geçip eğlenmeye karar vermiş.\nVe leyleğe doğru dönerek seslenmiş:\nTilki: ‘Hey leylek arkadaşım! Şu kocaman ormanda bir başıma kaldım. Canım çok sıkılıyor. Yanıma gel de biraz konuşalım.” demiş.\n Leylek, evden yiyecek bulmak için çıkmış. Ormanda yiyecek arıyormuş. Ama tilkinin böyle yalnız kaldığını görünce üzülmüş onun o haline. “Yanına gidip bir bakayım neden yalnız kalmış” diyerek tilkinin yanına doğru uçmuş.",
-        "masalResmi":"",
-        "masalRenk":""
+        "masalID": 0,
+        "kategoriID": 0,
+        "kategoriAdi": "Hayvan Masalları",
+        "masalAdi": "Kurnaz Tilki",
+        "masalMetni": "Günlerden bir gün, çok çok uzak ülkelerden birinde çok büyük bir orman varmış. Bu kocaman ormanın içinde sayısız çeşit hayvan yaşarmış. Bu hayvanların biri tilkiymiş. Bu tilki çok kurnaz ve açıkgöz bir hayvanmış. Herkesle dalga geçer ve diğer hayvanlara karşı çok saygısızmış.\n Bir gün bu kurnaz tilkinin canı çok sıkılmış ve ormanda gezintiye çıkmış. Ormanda gezerken kendi kendine konuşuyormuş ” Canım çok sıkılıyor. Keşke şimdi bir olsa da dalga geçip kendimi eğlendirsem.” diye etrafına bakınarak ormanda yürüyormuş. Kocaman ormanda öylece etrafına bakarak gezinirken, birden ağaçların arasından uçan beyaz leyleği görmüş. O anda leylek ile dalga geçip eğlenmeye karar vermiş.\nVe leyleğe doğru dönerek seslenmiş:\nTilki: ‘Hey leylek arkadaşım! Şu kocaman ormanda bir başıma kaldım. Canım çok sıkılıyor. Yanıma gel de biraz konuşalım.” demiş.\n Leylek, evden yiyecek bulmak için çıkmış. Ormanda yiyecek arıyormuş. Ama tilkinin böyle yalnız kaldığını görünce üzülmüş onun o haline. “Yanına gidip bir bakayım neden yalnız kalmış” diyerek tilkinin yanına doğru uçmuş.",
+        "masalResmi": "",
+        "masalRenk": ""
     },
     {
-        "masalID":1,
-        "kategoriID":0,
-        "masalAdi":"Kurbağa Prens",
-        "masalMetni":"Sen gerçekten benim bu güne kadar gördüğüm en güzel kızsın, ben sana aşık oldum, benimle evlenir misin?Güzeller güzeli prenses bu teklifi hiç düşünmeden kabul etti. Tüm olanları krala anlattılar ve evlenmek istediklerin söylediler. Kral evlenmelerine izin verdi ve evlendiler. Her gün birlikte bahçeye ve ormana gidip hayvanları beslediler. Yakışıklı prensi bir kurbağaya dönüştüren orman perisi onları gördü ve çok mutlu oldu.\n Sizi tebrik ederim çocuklar. Siz de artık yüce insanlar oldunuz. Aslında her insanın içinde yüce bir kişilik yatar. Ancak çoğu kişi bunu dışarı çıkaramaz. Siz doğaya iyi davranarak yüce birer insan olduğunuz kanıtladınız. Çünkü doğayı seven ve doğaya iyi davranan insanlar yüce insanlardır. Tanrı sizin mutlu olmanız için elinden gelen her şeyi yapmalı. Prens ve prenses orman perisinin kendileri için söylediklerinden sonra uzun ve mutlu birer hayat sürmüşler.",
-        "masalResmi":"",
-        "masalRenk":""
+        "masalID": 1,
+        "kategoriID": 0,
+        "kategoriAdi": "Hayvan Masalları",
+        "masalAdi": "Kurbağa Prens",
+        "masalMetni": "Sen gerçekten benim bu güne kadar gördüğüm en güzel kızsın, ben sana aşık oldum, benimle evlenir misin?Güzeller güzeli prenses bu teklifi hiç düşünmeden kabul etti. Tüm olanları krala anlattılar ve evlenmek istediklerin söylediler. Kral evlenmelerine izin verdi ve evlendiler. Her gün birlikte bahçeye ve ormana gidip hayvanları beslediler. Yakışıklı prensi bir kurbağaya dönüştüren orman perisi onları gördü ve çok mutlu oldu.\n Sizi tebrik ederim çocuklar. Siz de artık yüce insanlar oldunuz. Aslında her insanın içinde yüce bir kişilik yatar. Ancak çoğu kişi bunu dışarı çıkaramaz. Siz doğaya iyi davranarak yüce birer insan olduğunuz kanıtladınız. Çünkü doğayı seven ve doğaya iyi davranan insanlar yüce insanlardır. Tanrı sizin mutlu olmanız için elinden gelen her şeyi yapmalı. Prens ve prenses orman perisinin kendileri için söylediklerinden sonra uzun ve mutlu birer hayat sürmüşler.",
+        "masalResmi": "",
+        "masalRenk": ""
     },
     {
-        "masalID":2,
-        "kategoriID":0,
-        "masalAdi":"Kurt ile Kuzu",
-        "masalMetni":"Sen gerçekten benim bu güne kadar gördüğüm en güzel kızsın, ben sana aşık oldum, benimle evlenir misin?Güzeller güzeli prenses bu teklifi hiç düşünmeden kabul etti. Tüm olanları krala anlattılar ve evlenmek istediklerin söylediler. Kral evlenmelerine izin verdi ve evlendiler. Her gün birlikte bahçeye ve ormana gidip hayvanları beslediler. Yakışıklı prensi bir kurbağaya dönüştüren orman perisi onları gördü ve çok mutlu oldu.\n Sizi tebrik ederim çocuklar. Siz de artık yüce insanlar oldunuz. Aslında her insanın içinde yüce bir kişilik yatar. Ancak çoğu kişi bunu dışarı çıkaramaz. Siz doğaya iyi davranarak yüce birer insan olduğunuz kanıtladınız. Çünkü doğayı seven ve doğaya iyi davranan insanlar yüce insanlardır. Tanrı sizin mutlu olmanız için elinden gelen her şeyi yapmalı. Prens ve prenses orman perisinin kendileri için söylediklerinden sonra uzun ve mutlu birer hayat sürmüşler.",
-        "masalResmi":"",
-        "masalRenk":""
+        "masalID": 2,
+        "kategoriID": 0,
+        "kategoriAdi": "Hayvan Masalları",
+        "masalAdi": "Kurt ile Kuzu",
+        "masalMetni": "Sen gerçekten benim bu güne kadar gördüğüm en güzel kızsın, ben sana aşık oldum, benimle evlenir misin?Güzeller güzeli prenses bu teklifi hiç düşünmeden kabul etti. Tüm olanları krala anlattılar ve evlenmek istediklerin söylediler. Kral evlenmelerine izin verdi ve evlendiler. Her gün birlikte bahçeye ve ormana gidip hayvanları beslediler. Yakışıklı prensi bir kurbağaya dönüştüren orman perisi onları gördü ve çok mutlu oldu.\n Sizi tebrik ederim çocuklar. Siz de artık yüce insanlar oldunuz. Aslında her insanın içinde yüce bir kişilik yatar. Ancak çoğu kişi bunu dışarı çıkaramaz. Siz doğaya iyi davranarak yüce birer insan olduğunuz kanıtladınız. Çünkü doğayı seven ve doğaya iyi davranan insanlar yüce insanlardır. Tanrı sizin mutlu olmanız için elinden gelen her şeyi yapmalı. Prens ve prenses orman perisinin kendileri için söylediklerinden sonra uzun ve mutlu birer hayat sürmüşler.",
+        "masalResmi": "",
+        "masalRenk": ""
     },
-  
     {
-        "masalID":3,
-        "kategoriID":0,
-        "masalAdi":"Karga ile Leylek",
-        "masalMetni":"Sen gerçekten benim bu güne kadar gördüğüm en güzel kızsın, ben sana aşık oldum, benimle evlenir misin?Güzeller güzeli prenses bu teklifi hiç düşünmeden kabul etti. Tüm olanları krala anlattılar ve evlenmek istediklerin söylediler. Kral evlenmelerine izin verdi ve evlendiler. Her gün birlikte bahçeye ve ormana gidip hayvanları beslediler. Yakışıklı prensi bir kurbağaya dönüştüren orman perisi onları gördü ve çok mutlu oldu.\n Sizi tebrik ederim çocuklar. Siz de artık yüce insanlar oldunuz. Aslında her insanın içinde yüce bir kişilik yatar. Ancak çoğu kişi bunu dışarı çıkaramaz. Siz doğaya iyi davranarak yüce birer insan olduğunuz kanıtladınız. Çünkü doğayı seven ve doğaya iyi davranan insanlar yüce insanlardır. Tanrı sizin mutlu olmanız için elinden gelen her şeyi yapmalı. Prens ve prenses orman perisinin kendileri için söylediklerinden sonra uzun ve mutlu birer hayat sürmüşler.",
-        "masalResmi":"",
-        "masalRenk":""
+        "masalID": 3,
+        "kategoriID": 0,
+        "kategoriAdi": "Hayvan Masalları",
+        "masalAdi": "Karga ile Leylek",
+        "masalMetni": "Sen gerçekten benim bu güne kadar gördüğüm en güzel kızsın, ben sana aşık oldum, benimle evlenir misin?Güzeller güzeli prenses bu teklifi hiç düşünmeden kabul etti. Tüm olanları krala anlattılar ve evlenmek istediklerin söylediler. Kral evlenmelerine izin verdi ve evlendiler. Her gün birlikte bahçeye ve ormana gidip hayvanları beslediler. Yakışıklı prensi bir kurbağaya dönüştüren orman perisi onları gördü ve çok mutlu oldu.\n Sizi tebrik ederim çocuklar. Siz de artık yüce insanlar oldunuz. Aslında her insanın içinde yüce bir kişilik yatar. Ancak çoğu kişi bunu dışarı çıkaramaz. Siz doğaya iyi davranarak yüce birer insan olduğunuz kanıtladınız. Çünkü doğayı seven ve doğaya iyi davranan insanlar yüce insanlardır. Tanrı sizin mutlu olmanız için elinden gelen her şeyi yapmalı. Prens ve prenses orman perisinin kendileri için söylediklerinden sonra uzun ve mutlu birer hayat sürmüşler.",
+        "masalResmi": "",
+        "masalRenk": ""
     },
-  
     {
-        "masalID":4,
-        "kategoriID":0,
-        "masalAdi":"Minik Fare",
-        "masalMetni":"Sen gerçekten benim bu güne kadar gördüğüm en güzel kızsın, ben sana aşık oldum, benimle evlenir misin?Güzeller güzeli prenses bu teklifi hiç düşünmeden kabul etti. Tüm olanları krala anlattılar ve evlenmek istediklerin söylediler. Kral evlenmelerine izin verdi ve evlendiler. Her gün birlikte bahçeye ve ormana gidip hayvanları beslediler. Yakışıklı prensi bir kurbağaya dönüştüren orman perisi onları gördü ve çok mutlu oldu.\n Sizi tebrik ederim çocuklar. Siz de artık yüce insanlar oldunuz. Aslında her insanın içinde yüce bir kişilik yatar. Ancak çoğu kişi bunu dışarı çıkaramaz. Siz doğaya iyi davranarak yüce birer insan olduğunuz kanıtladınız. Çünkü doğayı seven ve doğaya iyi davranan insanlar yüce insanlardır. Tanrı sizin mutlu olmanız için elinden gelen her şeyi yapmalı. Prens ve prenses orman perisinin kendileri için söylediklerinden sonra uzun ve mutlu birer hayat sürmüşler.",
-        "masalResmi":"",
-        "masalRenk":""
+        "masalID": 4,
+        "kategoriID": 0,
+        "kategoriAdi": "Hayvan Masalları",
+        "masalAdi": "Minik Fare",
+        "masalMetni": "Sen gerçekten benim bu güne kadar gördüğüm en güzel kızsın, ben sana aşık oldum, benimle evlenir misin?Güzeller güzeli prenses bu teklifi hiç düşünmeden kabul etti. Tüm olanları krala anlattılar ve evlenmek istediklerin söylediler. Kral evlenmelerine izin verdi ve evlendiler. Her gün birlikte bahçeye ve ormana gidip hayvanları beslediler. Yakışıklı prensi bir kurbağaya dönüştüren orman perisi onları gördü ve çok mutlu oldu.\n Sizi tebrik ederim çocuklar. Siz de artık yüce insanlar oldunuz. Aslında her insanın içinde yüce bir kişilik yatar. Ancak çoğu kişi bunu dışarı çıkaramaz. Siz doğaya iyi davranarak yüce birer insan olduğunuz kanıtladınız. Çünkü doğayı seven ve doğaya iyi davranan insanlar yüce insanlardır. Tanrı sizin mutlu olmanız için elinden gelen her şeyi yapmalı. Prens ve prenses orman perisinin kendileri için söylediklerinden sonra uzun ve mutlu birer hayat sürmüşler.",
+        "masalResmi": "",
+        "masalRenk": ""
     }
-  
-  
 ]

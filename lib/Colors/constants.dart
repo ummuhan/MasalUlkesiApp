@@ -15,3 +15,10 @@ TextStyle listTitleSelectedTextStyle =
     TextStyle(color: Colors.white, fontSize: 20.0, fontWeight: FontWeight.w600);
 TextStyle defaultTextStyle =
     TextStyle(fontFamily: 'Avenir', fontSize: 20, color: Colors.white70);
+Color allTaleBgColor = Color(0xFF8080ff);
+Color allTaleCardColor = Color(0xFF9f80ff);
+Color category0 = Color(0xFFdf80ff);
+Color category1 = Color(0xFF80ffbf);
+Color category2 = Color(0xFFffdf80);
+Color category3 = Color(0xFFff80bf);
+Color category4 = Color(0xFF4db8ff);

@@ -36,7 +36,7 @@ class _AllTalePageState extends State<AllTalePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.purple[300],
+      backgroundColor: allTaleBgColor,
       body: ListView(
         children: [
           Stack(
@@ -86,7 +86,11 @@ class _AllTalePageState extends State<AllTalePage> {
                   itemBuilder: (context, index) {
                     return ListWidget(
                       masalAdi: masalList[index].masalAdi,
-                      masalKategori: masalList[index].kategoriID,
+                      masalKategori: masalList[index].kategoriAdi,
+                      masalImage: masalList[index].masalResmi,
+                      masalMetin: masalList[index].masalMetni,
+                      masalKategoriID:masalList[index].kategoriID,
+
                     );
                   }),
         ],
