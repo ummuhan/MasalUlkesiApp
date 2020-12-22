@@ -29,7 +29,7 @@ class _TalePageState extends State<TalePage> {
             children: [
               Container(
                 padding: EdgeInsets.only(
-                    top: 10, right: MediaQuery.of(context).size.width / 1.2),
+                    top: 10, right: MediaQuery.of(context).size.width / 1.1),
                 child: IconButton(
                   icon: Icon(Icons.arrow_back_ios),
                   onPressed: () {
@@ -76,13 +76,15 @@ class _TalePageState extends State<TalePage> {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       IconButton(
-                          icon: Icon(
-                            Icons.favorite,
-                            color: Colors.black54,
-                          ),
+                          icon: Image.asset("assets/images/icon/heart.png"),
                           onPressed: () {}),
-                      IconButton(icon: Icon(Icons.share), onPressed: () {}),
-                      IconButton(icon: Icon(Icons.comment), onPressed: () {})
+                      IconButton(
+                          icon: Image.asset(
+                              "assets/images/icon/speech_bubble.png"),
+                          onPressed: () {}),
+                      IconButton(
+                          icon: Image.asset("assets/images/icon/share.png"),
+                          onPressed: () {})
                     ],
                   ))
             ],
