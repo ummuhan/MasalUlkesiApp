@@ -3,8 +3,12 @@ class Masal {
   int kategoriID;
   String masalMetni;
   String masalAdi;
-  Masal(this.masalAdi, this.kategoriID, this.masalMetni);
-  Masal.withID(this.masalID, this.masalAdi, this.kategoriID, this.masalMetni);
+  String masalResmi;
+  String masalRenk;
+  Masal(this.masalAdi, this.kategoriID, this.masalMetni, this.masalRenk,
+      this.masalResmi);
+  Masal.withID(this.masalID, this.masalAdi, this.kategoriID, this.masalMetni,
+      this.masalRenk, this.masalResmi);
 
   Map<String, dynamic> toMap() {
     //Gelen nesneyi mape çevirir.
@@ -13,6 +17,8 @@ class Masal {
     map["kategoriD"] = this.kategoriID;
     map["masalAdi"] = this.masalAdi;
     map["masalMetni"] = this.masalMetni;
+    map["masalRenk"] = this.masalRenk;
+    map["masalResmi"] = this.masalResmi;
     return map;
   }
 
@@ -22,9 +28,11 @@ class Masal {
     this.kategoriID = map["kategoriID"];
     this.masalAdi = map["masalAdi"];
     this.masalMetni = map["masalMetni"];
+    this.masalRenk = map["masalRenk"];
+    this.masalResmi = map["masalResmi"];
   }
   @override
   String toString() {
-    return "Masal ID: $masalID Masal Adi: $masalAdi Kategori Id: $kategoriID Masal Metni $masalMetni";
+    return "Masal ID: $masalID Masal Adi: $masalAdi Kategori Id: $kategoriID Masal Metni $masalMetni Masal Renk $masalRenk Masal Resmi $masalResmi";
   }
 }
