@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:storyapp/Colors/constants.dart';
+import 'package:storyapp/Style/text_style.dart';
 import 'package:storyapp/model/masal.dart';
 import 'package:storyapp/widgets/list_widgets.dart';
 
@@ -56,11 +57,7 @@ class _AllTalePageState extends State<AllTalePage> {
                   ),
                   Text(
                     "Masal Ülkesi",
-                    style: TextStyle(
-                        fontFamily: 'Avenir',
-                        fontSize: 20,
-                        color: primaryTextColor,
-                        fontWeight: FontWeight.w300),
+                    style: allTalePageTittleStyle,
                     textAlign: TextAlign.left,
                   ),
                   Divider(
@@ -83,12 +80,13 @@ class _AllTalePageState extends State<AllTalePage> {
           masalList.length == 0
               ? const Center(child: const Text("Loading..."))
               : ListView.builder(
-                  shrinkWrap: true,
+                  shrinkWrap: true, //Listview hatasını çözen yapılar
                   physics: ScrollPhysics(),
                   itemCount: masalList.length,
                   itemBuilder: (context, index) {
                     return ListWidget(
-                      baslik: masalList[index].masalAdi,
+                      masalAdi: masalList[index].masalAdi,
+                      masalKategori: masalList[index].kategoriID,
                     );
                   }),
         ],
