@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:storyapp/Colors/constants.dart';
+import 'package:storyapp/model/bgcolor_model.dart';
 import 'package:storyapp/model/masal.dart';
 
 class DetailPage extends StatefulWidget {
@@ -34,10 +35,11 @@ class _DetailPageState extends State<DetailPage> {
     loadLocalJson();
   }
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.yellow[600],
+        backgroundColor: bgColorItem[widget.index].color,
         body: ListView(
           children: [
             Stack(
