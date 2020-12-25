@@ -35,67 +35,73 @@ class _DetailPageState extends State<DetailPage> {
     loadLocalJson();
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: bgColorItem[widget.index].color,
-        body: ListView(
-          children: [
-            Stack(
-              children: [
-                Column(
-                  children: [
-                    SizedBox(
-                      height: 200,
-                    ),
-                    Text(
-                      widget.name,
-                      style: TextStyle(
-                          fontFamily: 'Avenir',
-                          fontSize: 30,
-                          color: primaryTextColor,
-                          fontWeight: FontWeight.w900),
-                      textAlign: TextAlign.left,
-                    ),
-                    Text(
-                      "Masal Ülkesi",
-                      style: TextStyle(
-                          fontFamily: 'Avenir',
-                          fontSize: 20,
-                          color: primaryTextColor,
-                          fontWeight: FontWeight.w300),
-                      textAlign: TextAlign.left,
-                    ),
-                    Divider(
-                      color: Colors.black38,
-                    ),
-                    Column(
-                      children: [
-                        buildMasalContainer(context),
-                      ],
-                    ),
-                  ],
-                ),
-                Positioned(
-                  child: Hero(
-                      tag: "",
-                      child: Center(
-                        child: Container(
-                            width: MediaQuery.of(context).size.width / 2,
-                            child: Image.asset("${widget.image}")),
-                      )),
-                ),
-                IconButton(
-                  icon: Icon(Icons.arrow_back_ios),
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                ),
-              ],
-            ),
-          ],
-        ));
+        body: Container(
+      decoration: BoxDecoration(
+        gradient: LinearGradient(colors: [
+          bgColorItem[widget.index].color1,
+          bgColorItem[widget.index].color2
+        ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
+      ),
+      child: ListView(
+        children: [
+          Stack(
+            children: [
+              Column(
+                children: [
+                  SizedBox(
+                    height: 200,
+                  ),
+                  Text(
+                    widget.name,
+                    style: TextStyle(
+                        fontFamily: 'Avenir',
+                        fontSize: 30,
+                        color: primaryTextColor,
+                        fontWeight: FontWeight.w900),
+                    textAlign: TextAlign.left,
+                  ),
+                  Text(
+                    "Masal Ülkesi",
+                    style: TextStyle(
+                        fontFamily: 'Avenir',
+                        fontSize: 20,
+                        color: primaryTextColor,
+                        fontWeight: FontWeight.w300),
+                    textAlign: TextAlign.left,
+                  ),
+                  Divider(
+                    color: Colors.black38,
+                  ),
+                  Column(
+                    children: [
+                      buildMasalContainer(context),
+                    ],
+                  ),
+                ],
+              ),
+              Positioned(
+                child: Hero(
+                    tag: "",
+                    child: Center(
+                      child: Container(
+                          width: MediaQuery.of(context).size.width / 2,
+                          child: Image.asset("${widget.image}")),
+                    )),
+              ),
+              IconButton(
+                icon: Icon(Icons.arrow_back_ios),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              ),
+            ],
+          ),
+        ],
+      ),
+    ));
   }
 
   Container buildMasalContainer(BuildContext context) {

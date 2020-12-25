@@ -7,12 +7,12 @@
   
     {
         "kategoriID": 1,     
-        "kategoriAdi": "Komik Masallar",
+        "kategoriAdi": "Genel Masallar",
         "kategoriResim": "komik"
     },
     {
         "kategoriID":2, 
-        "kategoriAdi": "İngilizce Masallar",    
+        "kategoriAdi": "Kısa Masallar",    
          "kategoriResim": "ingilizce"
     },
     {
